@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *text;
 
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

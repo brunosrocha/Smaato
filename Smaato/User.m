@@ -7,7 +7,21 @@
 //
 
 #import "User.h"
+#import "NSDictionary+Safe.h"
 
 @implementation User
+
+- (id)initWithDictionary:(NSDictionary *)dictionary {
+    
+    if (self = [super init]) {
+        
+        self.name = [dictionary objectForKeyNotNull: @"name"];
+        self.country = [dictionary objectForKeyNotNull: @"country"];
+
+    }
+    
+    return self;
+    
+}
 
 @end

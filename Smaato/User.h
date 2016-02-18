@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *country;
 
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

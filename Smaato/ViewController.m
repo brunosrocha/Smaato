@@ -8,8 +8,16 @@
 
 #import "ViewController.h"
 #import "SMTNetwork.h"
+#import "Object.h"
+#import "NSArray+RandomObject.h"
 
-@interface ViewController ()
+@interface ViewController () <UIAlertViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UIImageView *image;
+@property (nonatomic, weak) IBOutlet UILabel *text;
+@property (nonatomic, weak) IBOutlet UILabel *dateCreated;
+@property (nonatomic, weak) IBOutlet UILabel *userInformation;
+@property (strong) Object *object;
 
 @end
 
@@ -18,21 +26,102 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self sortTouchedUp];
+    
+}
+
+#pragma mark - 
+#pragma mark - IBAction Methods
+
+- (IBAction)sortTouchedUp
+{
     NSString *url = @"http://private-d847e-demoresponse.apiary-mock.com/questions";
     
-    
-//    NSString *finalPath = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    void (^resultBlock)() = ^() {
+
+        if (_object.isContentValid) {
+            
+            if ([_object.type isEqualToString: @"img"]) {
+                
+                _image.hidden = NO;
+                _text.hidden = YES;
+                
+            } else {
+                
+                _image.hidden = YES;
+                _text.hidden = NO;
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                _text.text = _object.data.text;
+                _userInformation.text = [NSString stringWithFormat: @"Name: %@ , Country: %@",
+                                         _object.user.name, _object.user.country];
+                
+            });
+            
+        } else {
+            
+            [self error];
+        }
+
+    };
     
     [[SMTNetwork instance] requestWithURL: url method: GET parameters: nil success:^(NSArray *data, NSURLResponse *response) {
         
-    } failure:^(NSError *error) {
+        NSMutableArray *mArray = [NSMutableArray array];
         
+        if (data.count) {
+            
+            for (NSDictionary *dictionary in data) {
+                Object *object = [[Object alloc] initWithDictionary: dictionary];
+                [mArray addObject: object];
+            }
+            
+            Object *object = [mArray randomObject];
+            
+            self.object = object;
+            
+            resultBlock();
+            
+        } else {
+            
+            [self error];
+        }
+        
+        
+    } failure:^(NSError *error) {
+        [self error];
     }];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)favoriteButtonTouchedUp {
+    
+    
 }
+
+#pragma mark - 
+#pragma mark - Error Handling
+
+- (void)error {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[[UIAlertView alloc] initWithTitle: @"Message" message: @"Something went wrong please try again!" delegate: self cancelButtonTitle: @"OK" otherButtonTitles: @"Try!", nil] show];
+    });
+    
+}
+
+#pragma mark - 
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 1) {
+        [self sortTouchedUp];
+    }
+}
+
 
 @end

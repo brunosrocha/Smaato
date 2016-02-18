@@ -7,7 +7,20 @@
 //
 
 #import "Data.h"
+#import "NSDictionary+Safe.h"
 
 @implementation Data
+
+- (id)initWithDictionary:(NSDictionary *)dictionary {
+    
+    if (self = [super init]) {
+        
+        self.url = [dictionary objectForKeyNotNull: @"url"];
+        self.text = [dictionary objectForKeyNotNull: @"text"];
+    }
+    
+    return self;
+    
+}
 
 @end

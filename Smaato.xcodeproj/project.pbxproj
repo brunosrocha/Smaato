@@ -10,6 +10,8 @@
 		A3212B611C7611D300C6ED61 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B601C7611D300C6ED61 /* Object.m */; };
 		A3212B641C7611E100C6ED61 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B631C7611E100C6ED61 /* Data.m */; };
 		A3212B671C7611FA00C6ED61 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B661C7611FA00C6ED61 /* User.m */; };
+		A3212B6B1C76154400C6ED61 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B6A1C76154400C6ED61 /* NSDictionary+Safe.m */; };
+		A3212B711C761B2900C6ED61 /* NSArray+RandomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B701C761B2900C6ED61 /* NSArray+RandomObject.m */; };
 		A3AAC7231C7480AF007FE792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7221C7480AF007FE792 /* main.m */; };
 		A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7251C7480AF007FE792 /* AppDelegate.m */; };
 		A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7281C7480AF007FE792 /* ViewController.m */; };
@@ -38,6 +40,10 @@
 		A3212B631C7611E100C6ED61 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		A3212B651C7611FA00C6ED61 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		A3212B661C7611FA00C6ED61 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A3212B691C76154400C6ED61 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		A3212B6A1C76154400C6ED61 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		A3212B6F1C761B2900C6ED61 /* NSArray+RandomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RandomObject.h"; sourceTree = "<group>"; };
+		A3212B701C761B2900C6ED61 /* NSArray+RandomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RandomObject.m"; sourceTree = "<group>"; };
 		A3AAC71E1C7480AF007FE792 /* Smaato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smaato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AAC7221C7480AF007FE792 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3AAC7241C7480AF007FE792 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3212B681C7614B100C6ED61 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A3212B691C76154400C6ED61 /* NSDictionary+Safe.h */,
+				A3212B6A1C76154400C6ED61 /* NSDictionary+Safe.m */,
+				A3212B6F1C761B2900C6ED61 /* NSArray+RandomObject.h */,
+				A3212B701C761B2900C6ED61 /* NSArray+RandomObject.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		A3AAC7151C7480AF007FE792 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +114,7 @@
 		A3AAC7201C7480AF007FE792 /* Smaato */ = {
 			isa = PBXGroup;
 			children = (
+				A3212B681C7614B100C6ED61 /* Categories */,
 				A3AAC74E1C74BD46007FE792 /* Model */,
 				A3AAC7461C7484C2007FE792 /* APIConnection */,
 				A3AAC7241C7480AF007FE792 /* AppDelegate.h */,
@@ -257,7 +275,9 @@
 				A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */,
 				A3212B611C7611D300C6ED61 /* Object.m in Sources */,
 				A3AAC7231C7480AF007FE792 /* main.m in Sources */,
+				A3212B711C761B2900C6ED61 /* NSArray+RandomObject.m in Sources */,
 				A3212B641C7611E100C6ED61 /* Data.m in Sources */,
+				A3212B6B1C76154400C6ED61 /* NSDictionary+Safe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -372,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -384,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Smaato/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.bruno.Smaato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Smaato/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.bruno.Smaato;
 				PRODUCT_NAME = "$(TARGET_NAME)";

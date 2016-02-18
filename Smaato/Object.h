@@ -17,4 +17,8 @@
 @property (nonatomic, strong) Data *data;
 @property (nonatomic, strong) User *user;
 
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
+- (BOOL)isContentValid;
+
 @end
