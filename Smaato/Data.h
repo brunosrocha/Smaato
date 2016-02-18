@@ -10,4 +10,7 @@
 
 @interface Data : NSObject
 
+@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSString *text;
+
 @end

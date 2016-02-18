@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Data.h"
+#import "User.h"
 
 @interface Object : NSObject
+
+@property (nonatomic) NSTimeInterval created;
+@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) Data *data;
+@property (nonatomic, strong) User *user;
 
 @end

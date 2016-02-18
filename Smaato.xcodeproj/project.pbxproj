@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3212B611C7611D300C6ED61 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B601C7611D300C6ED61 /* Object.m */; };
+		A3212B641C7611E100C6ED61 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B631C7611E100C6ED61 /* Data.m */; };
+		A3212B671C7611FA00C6ED61 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B661C7611FA00C6ED61 /* User.m */; };
 		A3AAC7231C7480AF007FE792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7221C7480AF007FE792 /* main.m */; };
 		A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7251C7480AF007FE792 /* AppDelegate.m */; };
 		A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7281C7480AF007FE792 /* ViewController.m */; };
@@ -14,6 +17,8 @@
 		A3AAC72E1C7480AF007FE792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3AAC72D1C7480AF007FE792 /* Assets.xcassets */; };
 		A3AAC7311C7480AF007FE792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3AAC72F1C7480AF007FE792 /* LaunchScreen.storyboard */; };
 		A3AAC73C1C7480B0007FE792 /* SmaatoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC73B1C7480B0007FE792 /* SmaatoTests.m */; };
+		A3AAC74A1C7496A6007FE792 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AAC7491C7496A6007FE792 /* Foundation.framework */; };
+		A3AAC74D1C7496CB007FE792 /* SMTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC74C1C7496CB007FE792 /* SMTNetwork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3212B5F1C7611D300C6ED61 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		A3212B601C7611D300C6ED61 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
+		A3212B621C7611E100C6ED61 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		A3212B631C7611E100C6ED61 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		A3212B651C7611FA00C6ED61 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A3212B661C7611FA00C6ED61 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A3AAC71E1C7480AF007FE792 /* Smaato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smaato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AAC7221C7480AF007FE792 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3AAC7241C7480AF007FE792 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +51,9 @@
 		A3AAC7371C7480B0007FE792 /* SmaatoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmaatoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AAC73B1C7480B0007FE792 /* SmaatoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmaatoTests.m; sourceTree = "<group>"; };
 		A3AAC73D1C7480B0007FE792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3AAC7491C7496A6007FE792 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3AAC74B1C7496CB007FE792 /* SMTNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTNetwork.h; sourceTree = "<group>"; };
+		A3AAC74C1C7496CB007FE792 /* SMTNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTNetwork.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3AAC74A1C7496A6007FE792 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 		A3AAC7151C7480AF007FE792 = {
 			isa = PBXGroup;
 			children = (
+				A3AAC7491C7496A6007FE792 /* Foundation.framework */,
 				A3AAC7201C7480AF007FE792 /* Smaato */,
 				A3AAC73A1C7480B0007FE792 /* SmaatoTests */,
 				A3AAC71F1C7480AF007FE792 /* Products */,
@@ -81,6 +97,8 @@
 		A3AAC7201C7480AF007FE792 /* Smaato */ = {
 			isa = PBXGroup;
 			children = (
+				A3AAC74E1C74BD46007FE792 /* Model */,
+				A3AAC7461C7484C2007FE792 /* APIConnection */,
 				A3AAC7241C7480AF007FE792 /* AppDelegate.h */,
 				A3AAC7251C7480AF007FE792 /* AppDelegate.m */,
 				A3AAC7271C7480AF007FE792 /* ViewController.h */,
@@ -109,6 +127,28 @@
 				A3AAC73D1C7480B0007FE792 /* Info.plist */,
 			);
 			path = SmaatoTests;
+			sourceTree = "<group>";
+		};
+		A3AAC7461C7484C2007FE792 /* APIConnection */ = {
+			isa = PBXGroup;
+			children = (
+				A3AAC74B1C7496CB007FE792 /* SMTNetwork.h */,
+				A3AAC74C1C7496CB007FE792 /* SMTNetwork.m */,
+			);
+			name = APIConnection;
+			sourceTree = "<group>";
+		};
+		A3AAC74E1C74BD46007FE792 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3212B5F1C7611D300C6ED61 /* Object.h */,
+				A3212B601C7611D300C6ED61 /* Object.m */,
+				A3212B621C7611E100C6ED61 /* Data.h */,
+				A3212B631C7611E100C6ED61 /* Data.m */,
+				A3212B651C7611FA00C6ED61 /* User.h */,
+				A3212B661C7611FA00C6ED61 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */,
+				A3212B671C7611FA00C6ED61 /* User.m in Sources */,
+				A3AAC74D1C7496CB007FE792 /* SMTNetwork.m in Sources */,
 				A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */,
+				A3212B611C7611D300C6ED61 /* Object.m in Sources */,
 				A3AAC7231C7480AF007FE792 /* main.m in Sources */,
+				A3212B641C7611E100C6ED61 /* Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +444,7 @@
 				A3AAC7421C7480B0007FE792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3AAC7431C7480B0007FE792 /* Build configuration list for PBXNativeTarget "SmaatoTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +453,7 @@
 				A3AAC7451C7480B0007FE792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
