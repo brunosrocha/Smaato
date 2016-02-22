@@ -12,6 +12,8 @@
 		A3212B671C7611FA00C6ED61 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B661C7611FA00C6ED61 /* User.m */; };
 		A3212B6B1C76154400C6ED61 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B6A1C76154400C6ED61 /* NSDictionary+Safe.m */; };
 		A3212B711C761B2900C6ED61 /* NSArray+RandomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B701C761B2900C6ED61 /* NSArray+RandomObject.m */; };
+		A3389E041C7B3293003BB146 /* UIImageView+URLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E031C7B3293003BB146 /* UIImageView+URLImage.m */; };
+		A3389E0B1C7B4ADA003BB146 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E0A1C7B4ADA003BB146 /* Helper.m */; };
 		A3AAC7231C7480AF007FE792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7221C7480AF007FE792 /* main.m */; };
 		A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7251C7480AF007FE792 /* AppDelegate.m */; };
 		A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7281C7480AF007FE792 /* ViewController.m */; };
@@ -44,6 +46,10 @@
 		A3212B6A1C76154400C6ED61 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
 		A3212B6F1C761B2900C6ED61 /* NSArray+RandomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RandomObject.h"; sourceTree = "<group>"; };
 		A3212B701C761B2900C6ED61 /* NSArray+RandomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RandomObject.m"; sourceTree = "<group>"; };
+		A3389E021C7B3293003BB146 /* UIImageView+URLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URLImage.h"; sourceTree = "<group>"; };
+		A3389E031C7B3293003BB146 /* UIImageView+URLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URLImage.m"; sourceTree = "<group>"; };
+		A3389E091C7B4ADA003BB146 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		A3389E0A1C7B4ADA003BB146 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		A3AAC71E1C7480AF007FE792 /* Smaato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smaato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AAC7221C7480AF007FE792 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3AAC7241C7480AF007FE792 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,8 +94,19 @@
 				A3212B6A1C76154400C6ED61 /* NSDictionary+Safe.m */,
 				A3212B6F1C761B2900C6ED61 /* NSArray+RandomObject.h */,
 				A3212B701C761B2900C6ED61 /* NSArray+RandomObject.m */,
+				A3389E021C7B3293003BB146 /* UIImageView+URLImage.h */,
+				A3389E031C7B3293003BB146 /* UIImageView+URLImage.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		A3389E081C7B4AD2003BB146 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A3389E091C7B4ADA003BB146 /* Helper.h */,
+				A3389E0A1C7B4ADA003BB146 /* Helper.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		A3AAC7151C7480AF007FE792 = {
@@ -114,6 +131,7 @@
 		A3AAC7201C7480AF007FE792 /* Smaato */ = {
 			isa = PBXGroup;
 			children = (
+				A3389E081C7B4AD2003BB146 /* Helper */,
 				A3212B681C7614B100C6ED61 /* Categories */,
 				A3AAC74E1C74BD46007FE792 /* Model */,
 				A3AAC7461C7484C2007FE792 /* APIConnection */,
@@ -272,10 +290,12 @@
 				A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */,
 				A3212B671C7611FA00C6ED61 /* User.m in Sources */,
 				A3AAC74D1C7496CB007FE792 /* SMTNetwork.m in Sources */,
+				A3389E041C7B3293003BB146 /* UIImageView+URLImage.m in Sources */,
 				A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */,
 				A3212B611C7611D300C6ED61 /* Object.m in Sources */,
 				A3AAC7231C7480AF007FE792 /* main.m in Sources */,
 				A3212B711C761B2900C6ED61 /* NSArray+RandomObject.m in Sources */,
+				A3389E0B1C7B4ADA003BB146 /* Helper.m in Sources */,
 				A3212B641C7611E100C6ED61 /* Data.m in Sources */,
 				A3212B6B1C76154400C6ED61 /* NSDictionary+Safe.m in Sources */,
 			);

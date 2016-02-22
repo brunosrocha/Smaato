@@ -38,8 +38,9 @@
     
     return (self.created != 0 &&
             self.type != nil &&
-            self.data != nil &&
-            self.user != nil);
+            (self.data.url != nil || self.data.text != nil) &&
+            self.user.name != nil &&
+            self.user.country != nil);
 }
 
 @end

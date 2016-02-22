@@ -10,6 +10,8 @@
 #import "SMTNetwork.h"
 #import "Object.h"
 #import "NSArray+RandomObject.h"
+#import "UIImageView+URLImage.h"
+#import "Helper.h"
 
 @interface ViewController () <UIAlertViewDelegate>
 
@@ -30,41 +32,48 @@
     
 }
 
-#pragma mark - 
+#pragma mark -
 #pragma mark - IBAction Methods
 
-- (IBAction)sortTouchedUp
-{
+- (IBAction)sortTouchedUp {
+    
     NSString *url = @"http://private-d847e-demoresponse.apiary-mock.com/questions";
     
     void (^resultBlock)() = ^() {
-
+        
         if (_object.isContentValid) {
             
-            if ([_object.type isEqualToString: @"img"]) {
-                
-                _image.hidden = NO;
-                _text.hidden = YES;
-                
-            } else {
-                
-                _image.hidden = YES;
-                _text.hidden = NO;
-            }
-            
             dispatch_async(dispatch_get_main_queue(), ^{
+            
+                if ([_object.type isEqualToString: @"img"]) {
+                    
+                    [_image loadFromURL: [NSURL URLWithString: _object.data.url]  response:^(UIImage *image) {
+                        
+                        [_image setImage: image];
+                        
+                    }];
+                    
+                    _image.hidden = NO;
+                    _text.hidden = YES;
+                    
+                } else {
+                    
+                    _image.hidden = YES;
+                    _text.hidden = NO;
+                    _text.text = _object.data.text;
+                }
                 
-                _text.text = _object.data.text;
                 _userInformation.text = [NSString stringWithFormat: @"Name: %@ , Country: %@",
                                          _object.user.name, _object.user.country];
+                
+                _dateCreated.text = [Helper timeFromSeconds: _object.created withFormat: @"dd-MM-yyyy 'at' HH:mm"];
                 
             });
             
         } else {
-            
             [self error];
         }
-
+        
     };
     
     [[SMTNetwork instance] requestWithURL: url method: GET parameters: nil success:^(NSArray *data, NSURLResponse *response) {
@@ -93,7 +102,7 @@
     } failure:^(NSError *error) {
         [self error];
     }];
-
+    
 }
 
 - (IBAction)favoriteButtonTouchedUp {
@@ -101,22 +110,21 @@
     
 }
 
-#pragma mark - 
+#pragma mark -
 #pragma mark - Error Handling
 
 - (void)error {
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        
         [[[UIAlertView alloc] initWithTitle: @"Message" message: @"Something went wrong please try again!" delegate: self cancelButtonTitle: @"OK" otherButtonTitles: @"Try!", nil] show];
     });
-    
 }
 
-#pragma mark - 
+#pragma mark -
 #pragma mark - UIAlertViewDelegate
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex == 1) {
         [self sortTouchedUp];
