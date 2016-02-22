@@ -2,7 +2,7 @@
 //  Data.m
 //  Smaato
 //
-//  Created by Bruno Rocha on 2/18/16.
+//  Created by Bruno Rocha on 2/22/16.
 //  Copyright © 2016 Bruno. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
         
         self.url = [dictionary objectForKeyNotNull: @"url"];
         self.text = [dictionary objectForKeyNotNull: @"text"];
+        
     }
     
     return self;

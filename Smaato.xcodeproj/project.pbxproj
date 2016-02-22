@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A3212B611C7611D300C6ED61 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B601C7611D300C6ED61 /* Object.m */; };
-		A3212B641C7611E100C6ED61 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B631C7611E100C6ED61 /* Data.m */; };
 		A3212B671C7611FA00C6ED61 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B661C7611FA00C6ED61 /* User.m */; };
 		A3212B6B1C76154400C6ED61 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B6A1C76154400C6ED61 /* NSDictionary+Safe.m */; };
 		A3212B711C761B2900C6ED61 /* NSArray+RandomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3212B701C761B2900C6ED61 /* NSArray+RandomObject.m */; };
 		A3389E041C7B3293003BB146 /* UIImageView+URLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E031C7B3293003BB146 /* UIImageView+URLImage.m */; };
 		A3389E0B1C7B4ADA003BB146 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E0A1C7B4ADA003BB146 /* Helper.m */; };
+		A3389E0D1C7B5325003BB146 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3389E0C1C7B5325003BB146 /* CoreData.framework */; };
+		A3389E111C7B5361003BB146 /* Smaato.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3389E0F1C7B5361003BB146 /* Smaato.xcdatamodeld */; };
+		A3389E1A1C7B5501003BB146 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E191C7B5501003BB146 /* Data.m */; };
+		A3389E1D1C7B555B003BB146 /* SmaatoContent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E1C1C7B555B003BB146 /* SmaatoContent.m */; };
 		A3AAC7231C7480AF007FE792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7221C7480AF007FE792 /* main.m */; };
 		A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7251C7480AF007FE792 /* AppDelegate.m */; };
 		A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7281C7480AF007FE792 /* ViewController.m */; };
@@ -38,8 +41,6 @@
 /* Begin PBXFileReference section */
 		A3212B5F1C7611D300C6ED61 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 		A3212B601C7611D300C6ED61 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
-		A3212B621C7611E100C6ED61 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
-		A3212B631C7611E100C6ED61 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		A3212B651C7611FA00C6ED61 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		A3212B661C7611FA00C6ED61 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A3212B691C76154400C6ED61 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
@@ -50,6 +51,12 @@
 		A3389E031C7B3293003BB146 /* UIImageView+URLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URLImage.m"; sourceTree = "<group>"; };
 		A3389E091C7B4ADA003BB146 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		A3389E0A1C7B4ADA003BB146 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		A3389E0C1C7B5325003BB146 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3389E101C7B5361003BB146 /* Smaato.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Smaato.xcdatamodel; sourceTree = "<group>"; };
+		A3389E181C7B5501003BB146 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		A3389E191C7B5501003BB146 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		A3389E1B1C7B555B003BB146 /* SmaatoContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmaatoContent.h; sourceTree = "<group>"; };
+		A3389E1C1C7B555B003BB146 /* SmaatoContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmaatoContent.m; sourceTree = "<group>"; };
 		A3AAC71E1C7480AF007FE792 /* Smaato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smaato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AAC7221C7480AF007FE792 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3AAC7241C7480AF007FE792 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3389E0D1C7B5325003BB146 /* CoreData.framework in Frameworks */,
 				A3AAC74A1C7496A6007FE792 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,9 +117,20 @@
 			name = Helper;
 			sourceTree = "<group>";
 		};
+		A3389E0E1C7B533F003BB146 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A3389E0F1C7B5361003BB146 /* Smaato.xcdatamodeld */,
+				A3389E1B1C7B555B003BB146 /* SmaatoContent.h */,
+				A3389E1C1C7B555B003BB146 /* SmaatoContent.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		A3AAC7151C7480AF007FE792 = {
 			isa = PBXGroup;
 			children = (
+				A3389E0C1C7B5325003BB146 /* CoreData.framework */,
 				A3AAC7491C7496A6007FE792 /* Foundation.framework */,
 				A3AAC7201C7480AF007FE792 /* Smaato */,
 				A3AAC73A1C7480B0007FE792 /* SmaatoTests */,
@@ -131,6 +150,7 @@
 		A3AAC7201C7480AF007FE792 /* Smaato */ = {
 			isa = PBXGroup;
 			children = (
+				A3389E0E1C7B533F003BB146 /* CoreData */,
 				A3389E081C7B4AD2003BB146 /* Helper */,
 				A3212B681C7614B100C6ED61 /* Categories */,
 				A3AAC74E1C74BD46007FE792 /* Model */,
@@ -179,10 +199,10 @@
 			children = (
 				A3212B5F1C7611D300C6ED61 /* Object.h */,
 				A3212B601C7611D300C6ED61 /* Object.m */,
-				A3212B621C7611E100C6ED61 /* Data.h */,
-				A3212B631C7611E100C6ED61 /* Data.m */,
 				A3212B651C7611FA00C6ED61 /* User.h */,
 				A3212B661C7611FA00C6ED61 /* User.m */,
+				A3389E181C7B5501003BB146 /* Data.h */,
+				A3389E191C7B5501003BB146 /* Data.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -287,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3389E1D1C7B555B003BB146 /* SmaatoContent.m in Sources */,
+				A3389E111C7B5361003BB146 /* Smaato.xcdatamodeld in Sources */,
 				A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */,
 				A3212B671C7611FA00C6ED61 /* User.m in Sources */,
 				A3AAC74D1C7496CB007FE792 /* SMTNetwork.m in Sources */,
@@ -296,8 +318,8 @@
 				A3AAC7231C7480AF007FE792 /* main.m in Sources */,
 				A3212B711C761B2900C6ED61 /* NSArray+RandomObject.m in Sources */,
 				A3389E0B1C7B4ADA003BB146 /* Helper.m in Sources */,
-				A3212B641C7611E100C6ED61 /* Data.m in Sources */,
 				A3212B6B1C76154400C6ED61 /* NSDictionary+Safe.m in Sources */,
+				A3389E1A1C7B5501003BB146 /* Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +520,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3389E0F1C7B5361003BB146 /* Smaato.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3389E101C7B5361003BB146 /* Smaato.xcdatamodel */,
+			);
+			currentVersion = A3389E101C7B5361003BB146 /* Smaato.xcdatamodel */;
+			path = Smaato.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A3AAC7161C7480AF007FE792 /* Project object */;
 }
