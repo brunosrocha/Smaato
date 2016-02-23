@@ -84,7 +84,7 @@
 
 - (BOOL)deleteObject:(NSNumber *)created {
     
-    SmaatoContent *content = [self fetchSmaatoContent:created];
+    SmaatoContent *content = [self fetchSmaatoObject:created];
     
     [_managedObjectContext deleteObject: content];
     
@@ -98,7 +98,7 @@
     
 }
 
-- (SmaatoContent *)fetchSmaatoContent:(NSNumber *)created {
+- (SmaatoContent *)fetchSmaatoObject:(NSNumber *)created {
     
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName: @"SmaatoContent"];
     
@@ -107,7 +107,10 @@
     
     NSArray *fetchedObjects = [_managedObjectContext executeFetchRequest: fetchRequest error: nil];
     
-    return [fetchedObjects firstObject];
+    if (fetchedObjects.count)
+        return [fetchedObjects firstObject];
+    
+    return nil;
     
 }
 
@@ -120,9 +123,7 @@
     [fetchRequest setEntity:entity];
     
     NSMutableArray *fetchedObjects = [NSMutableArray arrayWithArray: [_managedObjectContext executeFetchRequest: fetchRequest error: nil]];
-    
-    NSLog(@"%@", fetchedObjects);
-    
+
     return fetchedObjects;
 }
 

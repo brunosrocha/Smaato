@@ -198,7 +198,11 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Message" message: @"Something went wrong please try again!" delegate: self cancelButtonTitle: @"OK" otherButtonTitles: @"Try!", nil];
+       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Message"
+                                                           message: @"Something went wrong please try again!"
+                                                          delegate: self
+                                                 cancelButtonTitle:
+                                 @"OK" otherButtonTitles: @"Try!", nil];
         
         alertView.tag = 10;
         
