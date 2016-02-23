@@ -17,5 +17,6 @@
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) NSString *type;
 @property (nonatomic, retain) NSString *url;
+@property (nonatomic, retain) NSData *image;
 
 @end

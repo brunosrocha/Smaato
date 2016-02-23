@@ -16,5 +16,6 @@
 @dynamic text;
 @dynamic type;
 @dynamic url;
+@dynamic image;
 
 @end

@@ -17,6 +17,7 @@
 		A3389E111C7B5361003BB146 /* Smaato.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3389E0F1C7B5361003BB146 /* Smaato.xcdatamodeld */; };
 		A3389E1A1C7B5501003BB146 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E191C7B5501003BB146 /* Data.m */; };
 		A3389E1D1C7B555B003BB146 /* SmaatoContent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E1C1C7B555B003BB146 /* SmaatoContent.m */; };
+		A3389E201C7B5B98003BB146 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3389E1F1C7B5B98003BB146 /* CoreDataManager.m */; };
 		A3AAC7231C7480AF007FE792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7221C7480AF007FE792 /* main.m */; };
 		A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7251C7480AF007FE792 /* AppDelegate.m */; };
 		A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC7281C7480AF007FE792 /* ViewController.m */; };
@@ -26,6 +27,9 @@
 		A3AAC73C1C7480B0007FE792 /* SmaatoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC73B1C7480B0007FE792 /* SmaatoTests.m */; };
 		A3AAC74A1C7496A6007FE792 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AAC7491C7496A6007FE792 /* Foundation.framework */; };
 		A3AAC74D1C7496CB007FE792 /* SMTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AAC74C1C7496CB007FE792 /* SMTNetwork.m */; };
+		A3AF002D1C7C5CB8005BFF46 /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AF002C1C7C5CB8005BFF46 /* TextTableViewCell.m */; };
+		A3AF00301C7C5CC9005BFF46 /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AF002F1C7C5CC9005BFF46 /* ImageTableViewCell.m */; };
+		A3B0E86E1C7C536E0067F968 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B0E86D1C7C536E0067F968 /* FavoritesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,8 @@
 		A3389E191C7B5501003BB146 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		A3389E1B1C7B555B003BB146 /* SmaatoContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmaatoContent.h; sourceTree = "<group>"; };
 		A3389E1C1C7B555B003BB146 /* SmaatoContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmaatoContent.m; sourceTree = "<group>"; };
+		A3389E1E1C7B5B98003BB146 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		A3389E1F1C7B5B98003BB146 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		A3AAC71E1C7480AF007FE792 /* Smaato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smaato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AAC7221C7480AF007FE792 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3AAC7241C7480AF007FE792 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +79,12 @@
 		A3AAC7491C7496A6007FE792 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3AAC74B1C7496CB007FE792 /* SMTNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTNetwork.h; sourceTree = "<group>"; };
 		A3AAC74C1C7496CB007FE792 /* SMTNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTNetwork.m; sourceTree = "<group>"; };
+		A3AF002B1C7C5CB8005BFF46 /* TextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTableViewCell.h; sourceTree = "<group>"; };
+		A3AF002C1C7C5CB8005BFF46 /* TextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTableViewCell.m; sourceTree = "<group>"; };
+		A3AF002E1C7C5CC9005BFF46 /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		A3AF002F1C7C5CC9005BFF46 /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
+		A3B0E86C1C7C536E0067F968 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
+		A3B0E86D1C7C536E0067F968 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A303442D1C7B636A005FA41C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3B0E86F1C7C55110067F968 /* CustomView */,
+				A3AAC7271C7480AF007FE792 /* ViewController.h */,
+				A3AAC7281C7480AF007FE792 /* ViewController.m */,
+				A3B0E86C1C7C536E0067F968 /* FavoritesTableViewController.h */,
+				A3B0E86D1C7C536E0067F968 /* FavoritesTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		A3212B681C7614B100C6ED61 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +147,8 @@
 				A3389E0F1C7B5361003BB146 /* Smaato.xcdatamodeld */,
 				A3389E1B1C7B555B003BB146 /* SmaatoContent.h */,
 				A3389E1C1C7B555B003BB146 /* SmaatoContent.m */,
+				A3389E1E1C7B5B98003BB146 /* CoreDataManager.h */,
+				A3389E1F1C7B5B98003BB146 /* CoreDataManager.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -150,6 +176,7 @@
 		A3AAC7201C7480AF007FE792 /* Smaato */ = {
 			isa = PBXGroup;
 			children = (
+				A303442D1C7B636A005FA41C /* Controllers */,
 				A3389E0E1C7B533F003BB146 /* CoreData */,
 				A3389E081C7B4AD2003BB146 /* Helper */,
 				A3212B681C7614B100C6ED61 /* Categories */,
@@ -157,8 +184,6 @@
 				A3AAC7461C7484C2007FE792 /* APIConnection */,
 				A3AAC7241C7480AF007FE792 /* AppDelegate.h */,
 				A3AAC7251C7480AF007FE792 /* AppDelegate.m */,
-				A3AAC7271C7480AF007FE792 /* ViewController.h */,
-				A3AAC7281C7480AF007FE792 /* ViewController.m */,
 				A3AAC72A1C7480AF007FE792 /* Main.storyboard */,
 				A3AAC72D1C7480AF007FE792 /* Assets.xcassets */,
 				A3AAC72F1C7480AF007FE792 /* LaunchScreen.storyboard */,
@@ -205,6 +230,17 @@
 				A3389E191C7B5501003BB146 /* Data.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A3B0E86F1C7C55110067F968 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				A3AF002B1C7C5CB8005BFF46 /* TextTableViewCell.h */,
+				A3AF002C1C7C5CB8005BFF46 /* TextTableViewCell.m */,
+				A3AF002E1C7C5CC9005BFF46 /* ImageTableViewCell.h */,
+				A3AF002F1C7C5CC9005BFF46 /* ImageTableViewCell.m */,
+			);
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,11 +346,15 @@
 				A3389E1D1C7B555B003BB146 /* SmaatoContent.m in Sources */,
 				A3389E111C7B5361003BB146 /* Smaato.xcdatamodeld in Sources */,
 				A3AAC7291C7480AF007FE792 /* ViewController.m in Sources */,
+				A3B0E86E1C7C536E0067F968 /* FavoritesTableViewController.m in Sources */,
 				A3212B671C7611FA00C6ED61 /* User.m in Sources */,
 				A3AAC74D1C7496CB007FE792 /* SMTNetwork.m in Sources */,
+				A3AF002D1C7C5CB8005BFF46 /* TextTableViewCell.m in Sources */,
 				A3389E041C7B3293003BB146 /* UIImageView+URLImage.m in Sources */,
 				A3AAC7261C7480AF007FE792 /* AppDelegate.m in Sources */,
 				A3212B611C7611D300C6ED61 /* Object.m in Sources */,
+				A3AF00301C7C5CC9005BFF46 /* ImageTableViewCell.m in Sources */,
+				A3389E201C7B5B98003BB146 /* CoreDataManager.m in Sources */,
 				A3AAC7231C7480AF007FE792 /* main.m in Sources */,
 				A3212B711C761B2900C6ED61 /* NSArray+RandomObject.m in Sources */,
 				A3389E0B1C7B4ADA003BB146 /* Helper.m in Sources */,

@@ -12,6 +12,8 @@
 #import "NSArray+RandomObject.h"
 #import "UIImageView+URLImage.h"
 #import "Helper.h"
+#import "CoreDataManager.h"
+#import "FavoritesTableViewController.h"
 
 @interface ViewController () <UIAlertViewDelegate>
 
@@ -107,6 +109,22 @@
 
 - (IBAction)favoriteButtonTouchedUp {
     
+    if ([[CoreDataManager manager] saveObject: self.object withImage: UIImagePNGRepresentation(_image.image)]) {
+     
+        [[[UIAlertView alloc] initWithTitle: @"Message"
+                                    message: @"Object saved with success!"
+                                   delegate: nil cancelButtonTitle: @"OK"
+                          otherButtonTitles: nil] show];
+    } else {
+        [[[UIAlertView alloc] initWithTitle: @"Message"
+                                    message: @"Something weird happened please try again!"
+                                   delegate: nil cancelButtonTitle: @"OK"
+                          otherButtonTitles: nil] show];
+
+    }
+}
+
+- (IBAction)listFavorites {
     
 }
 
@@ -130,6 +148,5 @@
         [self sortTouchedUp];
     }
 }
-
 
 @end
