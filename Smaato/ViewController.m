@@ -21,6 +21,10 @@
 @property (nonatomic, weak) IBOutlet UILabel *text;
 @property (nonatomic, weak) IBOutlet UILabel *dateCreated;
 @property (nonatomic, weak) IBOutlet UILabel *userInformation;
+@property (nonatomic, weak) IBOutlet UIButton *sortButton;
+@property (nonatomic, weak) IBOutlet UIButton *favoriteButton;
+@property (nonatomic, weak) IBOutlet UIButton *listButton;
+@property (nonatomic, weak) IBOutlet UIButton *deleteButton;
 @property (strong) Object *object;
 
 @end
@@ -30,9 +34,60 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self sortTouchedUp];
+    if (self.smaatoContent) {
+        
+        _sortButton.hidden = _favoriteButton.hidden = _listButton.hidden = YES;
+        
+        if ([_smaatoContent.type isEqualToString: @"img"]) {
+            
+            [self layoutWithImage: [UIImage imageWithData: _smaatoContent.image] userInfo: [NSString stringWithFormat: @"Name: %@ , Country: %@",
+                                                                                            _smaatoContent.name, _smaatoContent.country] creadted: [_smaatoContent.created intValue]];
+            
+        } else {
+            
+            [self layoutWithText: _smaatoContent.text userInfo: [NSString stringWithFormat: @"Name: %@ , Country: %@",
+                                                                 _smaatoContent.name, _smaatoContent.country] crated: [_smaatoContent.created intValue]];
+        }
+        
+        
+    } else {
+        
+        _deleteButton.hidden = YES;
+        
+        [self sortTouchedUp];
+        
+    }
+}
+
+
+#pragma mark - 
+#pragma mark - Layout
+
+- (void)layoutWithText:(NSString *)text userInfo:(NSString *)userInfo crated:(NSTimeInterval)created {
+    
+    _image.hidden = YES;
+    _text.hidden = NO;
+    _text.text = text;
+    
+    [self layoutUserInfo: userInfo created: created];
+}
+
+- (void)layoutWithImage:(UIImage *)image userInfo:(NSString *)userInfo creadted:(NSTimeInterval)created {
+    
+    [_image setImage: image];
+    _image.hidden = NO;
+    _text.hidden = YES;
+    [self layoutUserInfo: userInfo created: created];
+    
     
 }
+
+- (void)layoutUserInfo:(NSString *)userInfo created:(NSTimeInterval)created {
+    
+    _userInformation.text = userInfo;
+    _dateCreated.text = [Helper timeFromSeconds: created withFormat: @"dd-MM-yyyy 'at' HH:mm"];
+}
+
 
 #pragma mark -
 #pragma mark - IBAction Methods
@@ -51,25 +106,16 @@
                     
                     [_image loadFromURL: [NSURL URLWithString: _object.data.url]  response:^(UIImage *image) {
                         
-                        [_image setImage: image];
+                        [self layoutWithImage: image userInfo: [NSString stringWithFormat: @"Name: %@ , Country: %@",
+                                                                _object.user.name, _object.user.country] creadted:_object.created];
                         
                     }];
                     
-                    _image.hidden = NO;
-                    _text.hidden = YES;
-                    
                 } else {
                     
-                    _image.hidden = YES;
-                    _text.hidden = NO;
-                    _text.text = _object.data.text;
+                    [self layoutWithText: _object.data.text userInfo: [NSString stringWithFormat: @"Name: %@ , Country: %@",
+                                                                       _object.user.name, _object.user.country]crated: _object.created];
                 }
-                
-                _userInformation.text = [NSString stringWithFormat: @"Name: %@ , Country: %@",
-                                         _object.user.name, _object.user.country];
-                
-                _dateCreated.text = [Helper timeFromSeconds: _object.created withFormat: @"dd-MM-yyyy 'at' HH:mm"];
-                
             });
             
         } else {
@@ -124,7 +170,24 @@
     }
 }
 
-- (IBAction)listFavorites {
+- (IBAction)deleteFavorite {
+    
+    
+    if ([[CoreDataManager manager] deleteObject: _smaatoContent.created]) {
+        
+        [[[UIAlertView alloc] initWithTitle: @"Message"
+                                    message: @"Favorite removed with success!"
+                                   delegate: self cancelButtonTitle: @"OK"
+                          otherButtonTitles: nil] show];
+
+    } else {
+        
+        [[[UIAlertView alloc] initWithTitle: @"Message"
+                                    message: @"Something weird happened please try again!"
+                                   delegate: nil cancelButtonTitle: @"OK"
+                          otherButtonTitles: nil] show];
+
+    }
     
 }
 
@@ -135,7 +198,11 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        [[[UIAlertView alloc] initWithTitle: @"Message" message: @"Something went wrong please try again!" delegate: self cancelButtonTitle: @"OK" otherButtonTitles: @"Try!", nil] show];
+       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Message" message: @"Something went wrong please try again!" delegate: self cancelButtonTitle: @"OK" otherButtonTitles: @"Try!", nil];
+        
+        alertView.tag = 10;
+        
+        [alertView show];
     });
 }
 
@@ -144,8 +211,10 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    if (buttonIndex == 1) {
+    if (buttonIndex == 1 && alertView.tag == 10) {
         [self sortTouchedUp];
+    } else {
+        [self.navigationController popViewControllerAnimated: YES];
     }
 }
 

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SmaatoContent.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic ,strong) SmaatoContent *smaatoContent;
 
 @end
 

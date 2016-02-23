@@ -11,10 +11,11 @@
 #import "TextTableViewCell.h"
 #import "ImageTableViewCell.h"
 #import "SmaatoContent.h"
+#import "ViewController.h"
 
 @interface FavoritesTableViewController ()
 
-@property (strong) NSArray *data;
+@property (nonatomic ,strong) NSArray *data;
 
 @end
 
@@ -23,12 +24,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Favorites";
+
+}
+
+- (void)viewWillAppear:(BOOL)animate {
+    
+    [super viewWillAppear: animate];
+    
     self.data = [[CoreDataManager manager] fetchObjects];
     
-    self.title = @"Favorites";
+}
+
+- (void)setData:(NSArray *)data
+{
+    
+    if (_data)
+        _data = nil;
+    
+    _data = data;
     
     [self.tableView reloadData];
-
 }
 
 
@@ -70,6 +86,18 @@
     return nil;
 }
 
+#pragma mark - 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SmaatoContent *smaatoContent = _data[indexPath.row];
+    
+    ViewController *viewController = [[UIStoryboard storyboardWithName: @"Main" bundle: [NSBundle mainBundle]] instantiateViewControllerWithIdentifier: @"viewController"];
+    viewController.smaatoContent = smaatoContent;
+    [self.navigationController pushViewController: viewController animated: YES];
+    
+}
 
 /*
 #pragma mark - Navigation

@@ -55,8 +55,8 @@
 - (BOOL)saveObject:(Object *)object withImage:(NSData *)image {
     
     SmaatoContent *content = [NSEntityDescription
-                  insertNewObjectForEntityForName: @"SmaatoContent"
-                  inManagedObjectContext: _managedObjectContext];
+                              insertNewObjectForEntityForName: @"SmaatoContent"
+                              inManagedObjectContext: _managedObjectContext];
     
     content.country = object.user.country;
     content.created = @(object.created);
@@ -67,7 +67,7 @@
     
     if (image)
         content.image = image;
-        
+    
     NSError *error;
     if (![_managedObjectContext save: &error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
@@ -78,13 +78,37 @@
 }
 
 - (BOOL)saveObject:(Object *)object {
- 
-   return [self saveObject: object withImage: nil];
+    
+    return [self saveObject: object withImage: nil];
 }
 
-- (BOOL)deleteObject:(Object *)object {
+- (BOOL)deleteObject:(NSNumber *)created {
+    
+    SmaatoContent *content = [self fetchSmaatoContent:created];
+    
+    [_managedObjectContext deleteObject: content];
+    
+    NSError *error;
+    if (![_managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        return NO;
+    }
     
     return YES;
+    
+}
+
+- (SmaatoContent *)fetchSmaatoContent:(NSNumber *)created {
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName: @"SmaatoContent"];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"created = %@", created];
+    fetchRequest.predicate = predicate;
+    
+    NSArray *fetchedObjects = [_managedObjectContext executeFetchRequest: fetchRequest error: nil];
+    
+    return [fetchedObjects firstObject];
+    
 }
 
 - (NSMutableArray *)fetchObjects {
